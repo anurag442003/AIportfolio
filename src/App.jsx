@@ -36,14 +36,14 @@ export default function App() {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen bg-black">
-        <motion.div
+        <motion.img
+          src="/assets/bat.png"
+          alt="Batman Symbol"
           initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1, rotateY: 360 }}
+          animate={{ opacity: 1, scale: 1, rotate: 360 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
-          className="text-6xl font-bold"
-        >
-          <span className="text-gray-300">WELCOME</span>
-        </motion.div>
+          className="w-512 h-128" // Increased from w-32 h-32 to w-64 h-64
+        />
       </div>
     );
   }
@@ -65,7 +65,7 @@ export default function App() {
           <nav className="container mx-auto px-6 py-4">
             <div className="flex justify-between items-center">
               <NavLink to="/" className="text-2xl font-bold text-white">
-                AIKnight
+                AI
               </NavLink>
               <div className="hidden md:flex space-x-6">
                 {navItems.map((item) => (
