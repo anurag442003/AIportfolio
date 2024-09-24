@@ -54,7 +54,7 @@ export default function App() {
         {/* Background image */}
         <div 
           className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('assets/blue.jpeg')" }}
+          style={{ backgroundImage: "url('assets/dark.jpeg')" }}
         />
 
         {/* Overlay for better text visibility */}
