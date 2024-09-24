@@ -1,37 +1,37 @@
-import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useState, useEffect } from 'react'
-import Home from './pages/Home'
-import Projects from './pages/Projects'
-import Blog from './pages/Blog'
-import Contact from './pages/Contact'
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
 
 export default function App() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [loading, setLoading] = useState(true)
+  const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000)
-  }, [])
+    setTimeout(() => setLoading(false), 2000);
+  }, []);
 
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Projects', path: '/projects' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
-  ]
+  ];
 
   const pageVariants = {
-    initial: { opacity: 0 },
-    in: { opacity: 1 },
-    out: { opacity: 0 },
-  }
+    initial: { opacity: 0, x: '-100%' },
+    in: { opacity: 1, x: 0 },
+    out: { opacity: 0, x: '100%' },
+  };
 
   const pageTransition = {
     type: 'tween',
     ease: 'anticipate',
     duration: 0.5,
-  }
+  };
 
   if (loading) {
     return (
@@ -40,19 +40,37 @@ export default function App() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1, rotateY: 360 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
-          className="text-6xl font-bold text-yellow-500"
+          className="text-6xl font-bold"
         >
-          AI<span className="text-gray-300">Knight</span>
+          <span className="text-yellow-500">AI</span>
+          <span className="text-gray-300">Knight</span>
         </motion.div>
       </div>
-    )
+    );
   }
 
   return (
     <Router>
       <div className="min-h-screen bg-black text-gray-300 font-sans relative overflow-hidden">
-        <div className="fixed top-0 left-0 w-full h-full bg-[url('/gotham-skyline.svg')] opacity-10 z-0"></div>
-        <header className="fixed w-full z-50 bg-black bg-opacity-70 backdrop-filter backdrop-blur-sm">
+        {/* Dynamic background */}
+        <div className="fixed inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-black"></div>
+          <motion.div
+            className="absolute inset-0 opacity-30"
+            animate={{
+              backgroundPosition: ['0% 0%', '100% 100%'],
+              backgroundSize: ['100% 100%', '200% 200%'],
+            }}
+            transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
+            style={{
+              backgroundImage: 'url("/gotham-skyline.svg")',
+              backgroundRepeat: 'repeat',
+            }}
+          ></motion.div>
+        </div>
+
+        {/* Header */}
+        <header className="fixed w-full z-50 bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg">
           <nav className="container mx-auto px-6 py-4">
             <div className="flex justify-between items-center">
               <NavLink to="/" className="text-2xl font-bold">
@@ -126,6 +144,7 @@ export default function App() {
           )}
         </header>
 
+        {/* Main content */}
         <main className="pt-20 pb-12 z-10 relative">
           <AnimatePresence mode="wait">
             <Routes>
@@ -193,6 +212,7 @@ export default function App() {
           </AnimatePresence>
         </main>
 
+        {/* Footer */}
         <footer className="bg-gray-900 py-4 text-center text-sm text-gray-500">
           <div className="container mx-auto px-6">
             <p>&copy; 2023 AIKnight. Defending Gotham with Artificial Intelligence.</p>
@@ -200,5 +220,5 @@ export default function App() {
         </footer>
       </div>
     </Router>
-  )
+  );
 }
