@@ -77,7 +77,7 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <h1 className="text-5xl md:text-7xl font-bold mb-4">
+        <h1 className="text-5xl md:text-5xl font-bold mb-4">
           <TextScramble text="ANURAG BASAVARAJ BHUSARE" />
         </h1>
         <p className="text-2xl md:text-3xl text-gray-400 mb-8">

@@ -50,11 +50,15 @@ export default function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-black text-gray-300 font-sans relative overflow-hidden">
-        {/* Dynamic background */}
-        <div className="fixed inset-0 z-0">
-          <img src="/gotham-skyline.svg" alt="Gotham Skyline" className="w-full h-full object-cover opacity-30" />
-        </div>
+      <div className="flex flex-col min-h-screen bg-black text-gray-300 font-sans relative overflow-hidden">
+        {/* Background image */}
+        <div 
+          className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('assets/blue.jpeg')" }}
+        />
+
+        {/* Overlay for better text visibility */}
+        <div className="fixed inset-0 z-0 bg-black opacity-50" />
 
         {/* Header */}
         <header className="fixed w-full z-50 bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg">
@@ -132,7 +136,7 @@ export default function App() {
         </header>
 
         {/* Main content */}
-        <main className="pt-20 pb-12 z-10 relative">
+        <main className="flex-grow pt-20 pb-12 z-10 relative">
           <AnimatePresence mode="wait">
             <Routes>
               <Route
@@ -200,7 +204,7 @@ export default function App() {
         </main>
 
         {/* Footer */}
-        <footer className="bg-gray-900 py-4 text-center text-sm text-gray-500">
+        <footer className="bg-black bg-opacity-70 py-4 text-center text-sm text-gray-500 z-10 w-full absolute bottom-0">
           <div className="container mx-auto px-6">
             <p>&copy; 2024 AIKnight. Defending Gotham with Artificial Intelligence.</p>
           </div>
