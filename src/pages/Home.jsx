@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const TextScramble = ({ text }) => {
   const [scrambledText, setScrambledText] = useState('');
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const duration = 2000;
+  const duration = 700;
   const frames = 30;
 
   useEffect(() => {
@@ -78,10 +78,10 @@ export default function Home() {
         className="text-center mb-16"
       >
         <h1 className="text-5xl md:text-7xl font-bold mb-4">
-          <TextScramble text="AI KNIGHT" />
+          <TextScramble text="ANURAG BASAVARAJ BHUSARE" />
         </h1>
         <p className="text-2xl md:text-3xl text-gray-400 mb-8">
-          <TypingEffect text="Artificial Intelligence" />
+          <TypingEffect text="Portfolio" />
         </p>
         <motion.div
           whileHover={{ scale: 1.05 }}

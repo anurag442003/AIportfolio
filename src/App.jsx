@@ -42,8 +42,8 @@ export default function App() {
           transition={{ duration: 1.5, ease: "easeInOut" }}
           className="text-6xl font-bold"
         >
-          <span className="text-yellow-500">AI</span>
-          <span className="text-gray-300">Knight</span>
+          {/* <span className="text-yellow-500"></span> */}
+          <span className="text-gray-300">WELCOME</span>
         </motion.div>
       </div>
     );
