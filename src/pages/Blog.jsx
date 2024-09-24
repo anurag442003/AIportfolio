@@ -69,18 +69,18 @@ const CategoryFilter = ({ categories, activeCategory, setActiveCategory }) => (
 const BlogPostCard = ({ post }) => (
   <motion.div
     layout
-    className="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300"
-    whileHover={{ y: -5 }}
+    className="bg-gradient-to-r from-gray-800 via-gray-900 to-black rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer relative"
+    whileHover={{ scale: 1.05 }}
+    style={{ height: '500px' }}
   >
-    <div className="relative h-48">
-      <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
-      <div className="absolute top-2 right-2 bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded-full">
-        {post.category}
+    <div className="relative h-56">
+      <img src={post.image} alt={post.title} className="w-full h-full object-cover rounded-t-xl" />
+      <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+        <h3 className="text-3xl font-bold text-yellow-500">{post.title}</h3>
       </div>
     </div>
     <div className="p-6">
-      <h3 className="text-xl font-bold mb-2 text-yellow-500">{post.title}</h3>
-      <p className="text-gray-400 text-sm mb-4">{post.date}</p>
+      <p className="text-gray-400 mb-4">{post.date}</p>
       <p className="text-gray-300 mb-4">{post.excerpt}</p>
       <motion.button
         className="text-yellow-500 hover:text-yellow-400 transition-colors duration-300"
