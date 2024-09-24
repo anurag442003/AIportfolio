@@ -77,7 +77,7 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <h1 className="text-5xl md:text-5xl font-bold mb-4">
+        <h1 className="text-5xl md:text-5xl font-bold mb-4 text-gray-100">
           <TextScramble text="ANURAG BASAVARAJ BHUSARE" />
         </h1>
         <p className="text-2xl md:text-3xl text-gray-400 mb-8">
@@ -89,7 +89,8 @@ export default function Home() {
         >
           <Link
             to="/projects"
-            className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full transition duration-300 inline-block"
+            className="bg-gradient-to-r from-gray-900 to-black text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block shadow-lg hover:shadow-xl border border-white-500"
+            style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}
           >
             Explore My Arsenal
           </Link>
@@ -105,20 +106,20 @@ export default function Home() {
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className="bg-gradient-to-r from-gray-800 via-gray-900 to-black p-6 rounded-lg shadow-lg border border-gray-800 hover:border-yellow-500 transition duration-300 cursor-pointer relative overflow-hidden"
+            className="bg-gradient-to-br from-black via-gray-900 to-gray-800 p-6 rounded-lg shadow-2xl border border-gray-700 hover:border-white hover:border-opacity-80 transition duration-300 cursor-pointer relative overflow-hidden"
             onMouseEnter={() => setHoveredSkill(index)}
             onMouseLeave={() => setHoveredSkill(null)}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(255,255,255,0.3)' }}
           >
             <div className="text-4xl mb-4">{skill.icon}</div>
-            <h3 className="text-xl font-semibold mb-2 text-yellow-500">{skill.name}</h3>
+            <h3 className="text-xl font-semibold mb-2 text-white" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>{skill.name}</h3>
             <motion.div
-              className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4"
+              className="absolute inset-0 bg-black bg-opacity-95 flex items-center justify-center p-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: hoveredSkill === index ? 1 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              <p className="text-gray-300">{skill.description}</p>
+              <p className="text-white" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>{skill.description}</p>
             </motion.div>
             <motion.div
               className="absolute inset-0 flex items-center justify-center"
