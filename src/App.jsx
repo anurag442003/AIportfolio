@@ -61,12 +61,11 @@ export default function App() {
         <div className="fixed inset-0 z-0 bg-black opacity-50" />
 
         {/* Header */}
-        <header className="fixed w-full z-50 bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg">
+        <header className="fixed w-full z-50 bg-gradient-to-b from-black to-black shadow-lg">
           <nav className="container mx-auto px-6 py-4">
             <div className="flex justify-between items-center">
-              <NavLink to="/" className="text-2xl font-bold">
-                <span className="text-yellow-500">AI</span>
-                <span className="text-gray-300">Knight</span>
+              <NavLink to="/" className="text-2xl font-bold text-white">
+                AIKnight
               </NavLink>
               <div className="hidden md:flex space-x-6">
                 {navItems.map((item) => (
@@ -74,12 +73,13 @@ export default function App() {
                     key={item.name}
                     to={item.path}
                     className={({ isActive }) =>
-                      `hover:text-yellow-500 transition duration-300 ${
-                        isActive ? 'text-yellow-500' : 'text-gray-300'
-                      }`
+                      `relative overflow-hidden px-3 py-2 rounded-lg transition-all duration-300 ${
+                        isActive ? 'text-white' : 'text-gray-300'
+                      } hover:text-white hover:shadow-lg hover:shadow-white/30`
                     }
                   >
-                    {item.name}
+                    <span className="relative z-10">{item.name}</span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/20 opacity-0 transition-opacity duration-300 hover:opacity-100"></span>
                   </NavLink>
                 ))}
               </div>
@@ -115,16 +115,16 @@ export default function App() {
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -50 }}
-              className="md:hidden bg-gray-900 py-2"
+              className="md:hidden bg-gradient-to-b from-black to-black py-2"
             >
               {navItems.map((item) => (
                 <NavLink
                   key={item.name}
                   to={item.path}
                   className={({ isActive }) =>
-                    `block px-4 py-2 text-sm hover:bg-gray-800 ${
-                      isActive ? 'text-yellow-500' : 'text-gray-300'
-                    }`
+                    `block px-4 py-2 text-sm ${
+                      isActive ? 'text-white' : 'text-gray-300'
+                    } hover:text-white hover:bg-white/10 transition-colors duration-300`
                   }
                   onClick={() => setIsOpen(false)}
                 >
@@ -204,7 +204,7 @@ export default function App() {
         </main>
 
         {/* Footer */}
-        <footer className="bg-black bg-opacity-70 py-4 text-center text-sm text-gray-500 z-10 w-full absolute bottom-0">
+        <footer className="bg-gradient-to-t from-black to-black py-4 text-center text-sm text-gray-500 z-10 w-full absolute bottom-0 shadow-lg shadow-black/50">
           <div className="container mx-auto px-6">
             <p>&copy; 2024 AIKnight. Defending Gotham with Artificial Intelligence.</p>
           </div>
