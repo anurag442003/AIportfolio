@@ -11,42 +11,46 @@ export default function Contact() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <motion.div
-          className="bg-gray-900 p-8 rounded-lg shadow-md text-center transition-transform duration-150 hover:scale-101 hover:shadow-white"
-          whileHover={{ scale: 1.01 }}
+          className="bg-gradient-to-r from-gray-800 via-gray-900 to-black p-8 rounded-lg shadow-lg text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          whileHover={{ scale: 1.05 }}
         >
           <a href="https://www.linkedin.com/in/aiknight" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-500">
-            <FaLinkedin size={48} />
+            <FaLinkedin size={48} className="mx-auto mb-4" />
             <p className="mt-4 text-xl font-bold text-yellow-500">LinkedIn</p>
+            <p className="mt-2 text-gray-400">Connect with me on LinkedIn</p>
           </a>
         </motion.div>
 
         <motion.div
-          className="bg-gray-900 p-8 rounded-lg shadow-md text-center transition-transform duration-150 hover:scale-101 hover:shadow-white"
-          whileHover={{ scale: 1.01 }}
+          className="bg-gradient-to-r from-gray-800 via-gray-900 to-black p-8 rounded-lg shadow-lg text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          whileHover={{ scale: 1.05 }}
         >
           <a href="https://github.com/aiknight" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-500">
-            <FaGithub size={48} />
+            <FaGithub size={48} className="mx-auto mb-4" />
             <p className="mt-4 text-xl font-bold text-yellow-500">GitHub</p>
+            <p className="mt-2 text-gray-400">Check out my projects on GitHub</p>
           </a>
         </motion.div>
 
         <motion.div
-          className="bg-gray-900 p-8 rounded-lg shadow-md text-center transition-transform duration-150 hover:scale-101 hover:shadow-white"
-          whileHover={{ scale: 1.01 }}
+          className="bg-gradient-to-r from-gray-800 via-gray-900 to-black p-8 rounded-lg shadow-lg text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          whileHover={{ scale: 1.05 }}
         >
           <a href="https://twitter.com/aiknight" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-500">
-            <FaTwitter size={48} />
+            <FaTwitter size={48} className="mx-auto mb-4" />
             <p className="mt-4 text-xl font-bold text-yellow-500">Twitter</p>
+            <p className="mt-2 text-gray-400">Follow me on Twitter</p>
           </a>
         </motion.div>
 
         <motion.div
-          className="bg-gray-900 p-8 rounded-lg shadow-md text-center transition-transform duration-150 hover:scale-101 hover:shadow-white"
-          whileHover={{ scale: 1.01 }}
+          className="bg-gradient-to-r from-gray-800 via-gray-900 to-black p-8 rounded-lg shadow-lg text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          whileHover={{ scale: 1.05 }}
         >
           <a href="mailto:anuragbhusare44@gmail.com" className="text-gray-300 hover:text-yellow-500">
-            <FaEnvelope size={48} />
+            <FaEnvelope size={48} className="mx-auto mb-4" />
             <p className="mt-4 text-xl font-bold text-yellow-500">Email</p>
+            <p className="mt-2 text-gray-400">Send me an email</p>
           </a>
         </motion.div>
       </div>
