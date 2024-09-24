@@ -42,7 +42,6 @@ export default function App() {
           transition={{ duration: 1.5, ease: "easeInOut" }}
           className="text-6xl font-bold"
         >
-          {/* <span className="text-yellow-500"></span> */}
           <span className="text-gray-300">WELCOME</span>
         </motion.div>
       </div>
@@ -54,19 +53,7 @@ export default function App() {
       <div className="min-h-screen bg-black text-gray-300 font-sans relative overflow-hidden">
         {/* Dynamic background */}
         <div className="fixed inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-black"></div>
-          <motion.div
-            className="absolute inset-0 opacity-30"
-            animate={{
-              backgroundPosition: ['0% 0%', '100% 100%'],
-              backgroundSize: ['100% 100%', '200% 200%'],
-            }}
-            transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
-            style={{
-              backgroundImage: 'url("/gotham-skyline.svg")',
-              backgroundRepeat: 'repeat',
-            }}
-          ></motion.div>
+          <img src="/gotham-skyline.svg" alt="Gotham Skyline" className="w-full h-full object-cover opacity-30" />
         </div>
 
         {/* Header */}
@@ -222,5 +209,3 @@ export default function App() {
     </Router>
   );
 }
-
-//Here are the few changes i'm specifying. 1. Instead of Blue Gradient. Keep Black-Gray gradient 2. The projects card should link have Links to a video demo and the github page. 3. Contacts Page Should include Links to my Linkedin, Github, Twitter. 4. remove the activate AI visualisation that links to a video and the latest breakthrough card in the home page
