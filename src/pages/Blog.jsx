@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const blogPosts = [
@@ -6,84 +6,58 @@ const blogPosts = [
     title: 'The Future of AI in Crime Fighting',
     date: 'May 15, 2023',
     excerpt: 'Exploring how artificial intelligence is revolutionizing law enforcement and crime prevention in Gotham City.',
-    category: 'AI Ethics',
     image: '/ai-crime-fighting.jpg',
   },
   {
     title: 'Machine Learning: From Batcave to Gotham',
     date: 'April 28, 2023',
     excerpt: 'A deep dive into how machine learning algorithms are being applied to protect Gotham City from emerging threats.',
-    category: 'Machine Learning',
     image: '/ml-gotham.jpg',
   },
   {
     title: 'Ethics in AI: Lessons from a Dark Knight',
     date: 'April 10, 2023',
     excerpt: 'Discussing the ethical implications of AI in vigilante justice and the importance of responsible AI development.',
-    category: 'AI Ethics',
     image: '/ai-ethics.jpg',
   },
   {
     title: 'Neural Networks: Mimicking the Bat-Brain',
     date: 'March 22, 2023',
     excerpt: 'An exploration of how neural networks are inspired by biological brains and their applications in AI technology.',
-    category: 'Neural Networks',
     image: '/neural-networks.jpg',
   },
   {
     title: 'Gotham\'s Digital Twin: AI-Powered City Simulation',
     date: 'March 5, 2023',
     excerpt: 'How AI is being used to create a digital replica of Gotham for urban planning and crisis management.',
-    category: 'Smart Cities',
     image: '/digital-twin.jpg',
   },
   {
     title: 'The Role of Quantum Computing in Gotham\'s Cybersecurity',
     date: 'February 18, 2023',
     excerpt: 'Examining the potential of quantum computing in enhancing Gotham\'s digital defenses against cyber threats.',
-    category: 'Quantum Computing',
     image: '/quantum-cybersecurity.jpg',
   },
 ];
 
-const CategoryFilter = ({ categories, activeCategory, setActiveCategory }) => (
-  <div className="flex flex-wrap justify-center mb-8">
-    {categories.map((category) => (
-      <motion.button
-        key={category}
-        onClick={() => setActiveCategory(category)}
-        className={`m-2 px-4 py-2 rounded-full ${
-          activeCategory === category
-            ? 'bg-yellow-500 text-black'
-            : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-        }`}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        {category}
-      </motion.button>
-    ))}
-  </div>
-);
-
 const BlogPostCard = ({ post }) => (
   <motion.div
     layout
-    className="bg-gradient-to-r from-gray-800 via-gray-900 to-black rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer relative"
+    className="bg-gradient-to-br from-black to-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer relative border border-gray-700 hover:border-white hover:border-opacity-80"
     whileHover={{ scale: 1.05 }}
-    style={{ height: '500px' }}
+    style={{ height: '450px' }}
   >
-    <div className="relative h-56">
+    <div className="relative h-48">
       <img src={post.image} alt={post.title} className="w-full h-full object-cover rounded-t-xl" />
       <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-        <h3 className="text-3xl font-bold text-yellow-500">{post.title}</h3>
+        <h3 className="text-2xl font-bold text-white" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>{post.title}</h3>
       </div>
     </div>
-    <div className="p-6">
-      <p className="text-gray-400 mb-4">{post.date}</p>
-      <p className="text-gray-300 mb-4">{post.excerpt}</p>
+    <div className="p-5">
+      <p className="text-gray-400 mb-3 text-sm">{post.date}</p>
+      <p className="text-gray-300 mb-3 text-sm">{post.excerpt}</p>
       <motion.button
-        className="text-yellow-500 hover:text-yellow-400 transition-colors duration-300"
+        className="text-white hover:text-gray-300 transition-colors duration-300 text-sm"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -94,37 +68,24 @@ const BlogPostCard = ({ post }) => (
 );
 
 export default function Blog() {
-  const [activeCategory, setActiveCategory] = useState('All');
-  
-  const categories = ['All', ...new Set(blogPosts.map((post) => post.category))];
-
-  const filteredPosts = activeCategory === 'All'
-    ? blogPosts
-    : blogPosts.filter((post) => post.category === activeCategory);
-
   return (
     <div className="container mx-auto px-4 py-16">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-4xl font-bold mb-8 text-center text-yellow-500"
+        className="text-4xl font-bold mb-8 text-center text-white"
+        style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}
       >
         From the Bat-Computer: AI Insights
       </motion.h2>
 
-      <CategoryFilter
-        categories={categories}
-        activeCategory={activeCategory}
-        setActiveCategory={setActiveCategory}
-      />
-
       <motion.div
         layout
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         <AnimatePresence>
-          {filteredPosts.map((post, index) => (
+          {blogPosts.map((post, index) => (
             <motion.div
               key={post.title}
               initial={{ opacity: 0, y: 20 }}
