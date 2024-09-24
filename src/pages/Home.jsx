@@ -65,7 +65,7 @@ export default function Home() {
   const skills = [
     { name: 'Neural Networks', icon: '🧠', description: 'Crafting intelligent systems inspired by the human brain' },
     { name: 'Machine Learning', icon: '🤖', description: 'Teaching machines to learn and adapt like the Batcomputer' },
-    { name: 'Computer Vision', icon: '👁️', description: 'Giving AI the power to see and analyze like Batman himself' },
+    { name: 'Stable Diffusion', icon: '👁️', description: 'Giving AI the power to see and analyze like Batman himself' },
     { name: 'Natural Language Processing', icon: '💬', description: 'Enabling AI to understand and generate human language' },
   ];
 
