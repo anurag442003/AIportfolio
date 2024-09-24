@@ -77,7 +77,13 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <h1 className="text-5xl md:text-5xl font-bold mb-4 text-gray-100">
+        <h1 className="text-5xl md:text-5xl font-bold mb-4 text-white"
+            style={{
+              textShadow: '0 0 10px rgba(255,255,255,0.5)',
+              background: 'linear-gradient(to bottom, #ffffff, #f0f0f0)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}>
           <TextScramble text="ANURAG BASAVARAJ BHUSARE" />
         </h1>
         <p className="text-2xl md:text-3xl text-gray-400 mb-8">
@@ -106,7 +112,7 @@ export default function Home() {
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className="bg-gradient-to-br from-black via-gray-900 to-gray-800 p-6 rounded-lg shadow-2xl border border-gray-700 hover:border-white hover:border-opacity-80 transition duration-300 cursor-pointer relative overflow-hidden"
+            className="bg-gradient-to-br from-black to-gray-800 p-6 rounded-lg shadow-2xl border border-gray-700 hover:border-white hover:border-opacity-80 transition duration-300 cursor-pointer relative overflow-hidden"
             onMouseEnter={() => setHoveredSkill(index)}
             onMouseLeave={() => setHoveredSkill(null)}
             whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(255,255,255,0.3)' }}
