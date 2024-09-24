@@ -43,16 +43,22 @@ const projects = [
 const ProjectCard = ({ project, setSelectedProject }) => (
   <motion.div
     layout
-    className="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
-    whileHover={{ scale: 1.05 }}
+    className="bg-gradient-to-r from-gray-800 via-gray-900 to-black rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer relative"
+    whileHover={{ scale: 1.03 }}
     onClick={() => setSelectedProject(project)}
-    style={{ height: '400px' }} // Increased card size
+    style={{ height: '500px' }} // Increased card size
   >
-    <div className="p-4">
-      <p className="text-gray-400 mb-2">{project.description}</p>
-      <div className="flex flex-wrap mb-2">
+    <div className="relative h-56">
+      <img src={project.image} alt={project.title} className="w-full h-full object-cover rounded-t-xl" />
+      <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+        <h3 className="text-3xl font-bold text-yellow-500">{project.title}</h3>
+      </div>
+    </div>
+    <div className="p-6">
+      <p className="text-gray-400 mb-4">{project.description}</p>
+      <div className="flex flex-wrap mb-4">
         {project.tech.map((tech, index) => (
-          <span key={index} className="bg-yellow-500 text-black text-xs font-semibold mr-2 mb-2 px-2 py-1 rounded-full">
+          <span key={index} className="bg-yellow-500 text-black text-xs font-semibold mr-2 mb-2 px-3 py-1 rounded-full">
             {tech}
           </span>
         ))}
@@ -81,12 +87,12 @@ const ProjectModal = ({ project, closeModal }) => (
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       exit={{ scale: 0.8, opacity: 0 }}
-      className="bg-gray-900 rounded-lg overflow-hidden shadow-2xl max-w-2xl w-full"
+      className="bg-gray-900 rounded-xl overflow-hidden shadow-2xl max-w-2xl w-full"
       onClick={(e) => e.stopPropagation()}
     >
-      <img src={project.image} alt={project.title} className="w-full h-64 object-cover" />
+      <img src={project.image} alt={project.title} className="w-full h-64 object-cover rounded-t-xl" />
       <div className="p-6">
-        <h2 className="text-2xl font-bold text-yellow-500 mb-4">{project.title}</h2>
+        <h2 className="text-3xl font-bold text-yellow-500 mb-4">{project.title}</h2>
         <p className="text-gray-300 mb-4">{project.description}</p>
         <h3 className="text-xl font-semibold text-yellow-500 mb-2">Technologies Used:</h3>
         <ul className="list-disc list-inside text-gray-300 mb-4">
