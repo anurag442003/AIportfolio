@@ -1,40 +1,116 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+  }
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  }
+
   return (
-    <div className="container mx-auto px-6 py-12">
+    <div className="container mx-auto px-6">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="text-center mb-16"
+      >
+        <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-bold mb-4">
+          <span className="text-yellow-500">AI</span> in the Shadows
+        </motion.h1>
+        <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-400 mb-8">
+          Cutting-edge AI solutions for Gotham's darkest challenges
+        </motion.p>
+        <motion.div variants={itemVariants}>
+          <Link
+            to="/projects"
+            className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full transition duration-300 inline-block"
+          >
+            Uncover Projects
+          </Link>
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
+      >
+        {[
+          { title: 'Neural Networks', description: 'Advanced pattern recognition for crime prediction' },
+          { title: 'Quantum Computing', description: 'Harnessing quantum algorithms for unbreakable encryption' },
+          { title: 'Autonomous Systems', description: 'Self-evolving AI for adaptive city protection' },
+        ].map((skill, index) => (
+          <motion.div
+            key={index}
+            variants={itemVariants}
+            className="bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-800 hover:border-yellow-500 transition duration-300"
+          >
+            <h3 className="text-xl font-semibold mb-2 text-yellow-500">{skill.title}</h3>
+            <p className="text-gray-400">{skill.description}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="text-center mb-16"
+      >
+        <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-6 text-yellow-500">
+          The AI We Deserve
+        </motion.h2>
+        <motion.p variants={itemVariants} className="text-xl text-gray-400 mb-8">
+          Witness the evolution of AI, forged in the crucible of Gotham's challenges.
+        </motion.p>
+        <motion.div variants={itemVariants} className="relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-red-500 blur-lg opacity-20"></div>
+          <video
+            className="rounded-lg shadow-2xl w-full"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/ai-visualization.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
         className="text-center"
       >
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          Welcome to <span className="text-yellow-400">Bat</span>AI
-        </h1>
-        <p className="text-xl md:text-2xl mb-8">
-          Bringing AI to Gotham, one algorithm at a time
-        </p>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.8 }}
-        className="mt-12 flex justify-center"
-      >
-        <div className="w-64 h-64 relative">
-          <div className="absolute inset-0 bg-yellow-400 rounded-full opacity-20 blur-xl"></div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-32 h-32"
-            >
-              <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
-            </svg>
-          </div>
-        </div>
+        <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-6 text-yellow-500">
+          Latest Breakthroughs
+        </motion.h2>
+        <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {[
+            { title: 'Gotham\'s AI-Powered Surveillance System', date: 'June 15, 2023' },
+            { title: 'Ethical AI: The Silent Guardian of Privacy', date: 'June 1, 2023' },
+          ].map((post, index) => (
+            <div key={index} className="bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-800 hover:border-yellow-500 transition duration-300 text-left">
+              <h3 className="text-xl font-semibold mb-2 text-yellow-500">{post.title}</h3>
+              <p className="text-gray-400 mb-4">{post.date}</p>
+              <Link
+                to="/blog"
+                className="text-yellow-500 hover:text-yellow-600 transition duration-300"
+              >
+                Read More →
+              </Link>
+            </div>
+          ))}
+        </motion.div>
       </motion.div>
     </div>
   )

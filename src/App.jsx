@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect } from 'react'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Blog from './pages/Blog'
@@ -8,6 +8,11 @@ import Contact from './pages/Contact'
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000)
+  }, [])
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -16,25 +21,57 @@ export default function App() {
     { name: 'Contact', path: '/contact' },
   ]
 
+  const pageVariants = {
+    initial: { opacity: 0 },
+    in: { opacity: 1 },
+    out: { opacity: 0 },
+  }
+
+  const pageTransition = {
+    type: 'tween',
+    ease: 'anticipate',
+    duration: 0.5,
+  }
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen bg-black">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1, rotateY: 360 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+          className="text-6xl font-bold text-yellow-500"
+        >
+          AI<span className="text-gray-300">Knight</span>
+        </motion.div>
+      </div>
+    )
+  }
+
   return (
     <Router>
-      <div className="min-h-screen bg-black text-gray-300 font-sans relative">
-        {/* <img src={bg} alt="Batman Background" className="absolute z-0 inset-0 w-full h-full object-cover" /> */}
-        <header className="fixed w-full z-10">
-          <nav className="container mx-auto px-6 py-3">
+      <div className="min-h-screen bg-black text-gray-300 font-sans relative overflow-hidden">
+        <div className="fixed top-0 left-0 w-full h-full bg-[url('/gotham-skyline.svg')] opacity-10 z-0"></div>
+        <header className="fixed w-full z-50 bg-black bg-opacity-70 backdrop-filter backdrop-blur-sm">
+          <nav className="container mx-auto px-6 py-4">
             <div className="flex justify-between items-center">
-              <Link to="/" className="text-2xl font-bold">
-                <span className="text-red-500">Bat</span>AI
-              </Link>
-              <div className="hidden md:flex space-x-4">
+              <NavLink to="/" className="text-2xl font-bold">
+                <span className="text-yellow-500">AI</span>
+                <span className="text-gray-300">Knight</span>
+              </NavLink>
+              <div className="hidden md:flex space-x-6">
                 {navItems.map((item) => (
-                  <Link
+                  <NavLink
                     key={item.name}
                     to={item.path}
-                    className="hover:text-red-500 transition duration-300"
+                    className={({ isActive }) =>
+                      `hover:text-yellow-500 transition duration-300 ${
+                        isActive ? 'text-yellow-500' : 'text-gray-300'
+                      }`
+                    }
                   >
                     {item.name}
-                  </Link>
+                  </NavLink>
                 ))}
               </div>
               <div className="md:hidden">
@@ -72,31 +109,93 @@ export default function App() {
               className="md:hidden bg-gray-900 py-2"
             >
               {navItems.map((item) => (
-                <Link
+                <NavLink
                   key={item.name}
                   to={item.path}
-                  className="block px-4 py-2 text-sm hover:bg-gray-800"
+                  className={({ isActive }) =>
+                    `block px-4 py-2 text-sm hover:bg-gray-800 ${
+                      isActive ? 'text-yellow-500' : 'text-gray-300'
+                    }`
+                  }
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
-                </Link>
+                </NavLink>
               ))}
             </motion.div>
           )}
         </header>
 
-        <main className="pt-16 z-10">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+        <main className="pt-20 pb-12 z-10 relative">
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <motion.div
+                    key="home"
+                    initial="initial"
+                    animate="in"
+                    exit="out"
+                    variants={pageVariants}
+                    transition={pageTransition}
+                  >
+                    <Home />
+                  </motion.div>
+                }
+              />
+              <Route
+                path="/projects"
+                element={
+                  <motion.div
+                    key="projects"
+                    initial="initial"
+                    animate="in"
+                    exit="out"
+                    variants={pageVariants}
+                    transition={pageTransition}
+                  >
+                    <Projects />
+                  </motion.div>
+                }
+              />
+              <Route
+                path="/blog"
+                element={
+                  <motion.div
+                    key="blog"
+                    initial="initial"
+                    animate="in"
+                    exit="out"
+                    variants={pageVariants}
+                    transition={pageTransition}
+                  >
+                    <Blog />
+                  </motion.div>
+                }
+              />
+              <Route
+                path="/contact"
+                element={
+                  <motion.div
+                    key="contact"
+                    initial="initial"
+                    animate="in"
+                    exit="out"
+                    variants={pageVariants}
+                    transition={pageTransition}
+                  >
+                    <Contact />
+                  </motion.div>
+                }
+              />
+            </Routes>
+          </AnimatePresence>
         </main>
 
-        <footer className="bg-gray-900 py-4 mt-8 absolute inset-x-0 bottom-0">
-          <div className="container mx-auto px-6 text-center">
-            <p>&copy; 2023 BatAI. All rights reserved.</p>
+        <footer className="bg-gray-900 py-4 text-center text-sm text-gray-500">
+          <div className="container mx-auto px-6">
+            <p>&copy; 2023 AIKnight. Defending Gotham with Artificial Intelligence.</p>
           </div>
         </footer>
       </div>
