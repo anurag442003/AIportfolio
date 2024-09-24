@@ -46,20 +46,24 @@ const ProjectCard = ({ project, setSelectedProject }) => (
     className="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
     whileHover={{ scale: 1.05 }}
     onClick={() => setSelectedProject(project)}
+    style={{ height: '400px' }} // Increased card size
   >
-    <div className="relative h-48">
-      <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-      <h3 className="absolute bottom-2 left-2 text-xl font-bold text-white">{project.title}</h3>
-    </div>
     <div className="p-4">
       <p className="text-gray-400 mb-2">{project.description}</p>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap mb-2">
         {project.tech.map((tech, index) => (
           <span key={index} className="bg-yellow-500 text-black text-xs font-semibold mr-2 mb-2 px-2 py-1 rounded-full">
             {tech}
           </span>
         ))}
+      </div>
+      <div className="flex justify-between">
+        <a href={project.videoDemo} target="_blank" rel="noopener noreferrer" className="text-yellow-500 hover:text-yellow-600">
+          Video Demo
+        </a>
+        <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-yellow-500 hover:text-yellow-600">
+          GitHub
+        </a>
       </div>
     </div>
   </motion.div>

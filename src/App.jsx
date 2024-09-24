@@ -215,10 +215,12 @@ export default function App() {
         {/* Footer */}
         <footer className="bg-gray-900 py-4 text-center text-sm text-gray-500">
           <div className="container mx-auto px-6">
-            <p>&copy; 2023 AIKnight. Defending Gotham with Artificial Intelligence.</p>
+            <p>&copy; 2024 AIKnight. Defending Gotham with Artificial Intelligence.</p>
           </div>
         </footer>
       </div>
     </Router>
   );
 }
+
+//Here are the few changes i'm specifying. 1. Instead of Blue Gradient. Keep Black-Gray gradient 2. The projects card should link have Links to a video demo and the github page. 3. Contacts Page Should include Links to my Linkedin, Github, Twitter. 4. remove the activate AI visualisation that links to a video and the latest breakthrough card in the home page
