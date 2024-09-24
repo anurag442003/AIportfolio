@@ -105,7 +105,7 @@ export default function Home() {
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className="bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-800 hover:border-yellow-500 transition duration-300 cursor-pointer relative overflow-hidden"
+            className="bg-gradient-to-r from-gray-800 via-gray-900 to-black p-6 rounded-lg shadow-lg border border-gray-800 hover:border-yellow-500 transition duration-300 cursor-pointer relative overflow-hidden"
             onMouseEnter={() => setHoveredSkill(index)}
             onMouseLeave={() => setHoveredSkill(null)}
             whileHover={{ scale: 1.05 }}
@@ -119,6 +119,14 @@ export default function Home() {
               transition={{ duration: 0.3 }}
             >
               <p className="text-gray-300">{skill.description}</p>
+            </motion.div>
+            <motion.div
+              className="absolute inset-0 flex items-center justify-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: hoveredSkill === index ? 1 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              
             </motion.div>
           </motion.div>
         ))}
