@@ -62,10 +62,10 @@ export default function App() {
 
         {/* Header */}
         <header className="fixed w-full z-50 bg-gradient-to-b from-black to-black shadow-lg">
-          <nav className="container mx-auto px-6 py-4">
+          <nav className="container mx-auto px-6 py-3">
             <div className="flex justify-between items-center">
               <NavLink to="/" className="flex items-center">
-                <img src="/assets/ai-logo.jpeg" alt="AI Logo" className="h-8 w-auto" />
+                <img src="/assets/batmetal.png" alt="AI Logo" className="h-8 w-auto" />
               </NavLink>
               <div className="hidden md:flex space-x-6">
                 {navItems.map((item) => (
