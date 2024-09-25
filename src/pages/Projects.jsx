@@ -7,36 +7,48 @@ const projects = [
     description: 'Advanced AI system for crime analysis and prediction',
     image: '/batcomputer-ai.jpg',
     tech: ['Machine Learning', 'Big Data', 'Neural Networks'],
+    videoDemo: '/videos/batcomputer-ai-demo.mp4',
+    github: 'https://github.com/batman/batcomputer-ai',
   },
   {
     title: 'Gotham Security Network',
     description: 'AI-powered surveillance system for Gotham City',
     image: '/gotham-security.jpg',
     tech: ['Computer Vision', 'Facial Recognition', 'Edge Computing'],
+    videoDemo: '/videos/gotham-security-demo.mp4',
+    github: 'https://github.com/batman/gotham-security',
   },
   {
     title: 'Batmobile Autopilot',
     description: 'Self-driving AI for the Batmobile',
     image: '/batmobile-autopilot.jpg',
     tech: ['Reinforcement Learning', 'Sensor Fusion', 'Real-time Decision Making'],
+    videoDemo: '/videos/batmobile-autopilot-demo.mp4',
+    github: 'https://github.com/batman/batmobile-autopilot',
   },
   {
     title: 'Batsuit Nanotech Interface',
     description: 'AI-driven nanotech control system for the Batsuit',
     image: '/batsuit-nanotech.jpg',
     tech: ['Swarm Intelligence', 'Nanorobotics', 'Adaptive Materials'],
+    videoDemo: '/videos/batsuit-nanotech-demo.mp4',
+    github: 'https://github.com/batman/batsuit-nanotech',
   },
   {
     title: 'Arkham Asylum Rehabilitation AI',
     description: 'AI-assisted rehabilitation program for Arkham inmates',
     image: '/arkham-rehab-ai.jpg',
     tech: ['Natural Language Processing', 'Sentiment Analysis', 'Cognitive Behavioral Modeling'],
+    videoDemo: '/videos/arkham-rehab-ai-demo.mp4',
+    github: 'https://github.com/batman/arkham-rehab-ai',
   },
   {
     title: 'Wayne Enterprises R&D Simulator',
     description: 'AI-powered simulator for testing new Batman gadgets',
     image: '/wayne-enterprises-simulator.jpg',
     tech: ['Physics Simulation', 'Genetic Algorithms', 'Virtual Reality'],
+    videoDemo: '/videos/wayne-enterprises-simulator-demo.mp4',
+    github: 'https://github.com/batman/wayne-enterprises-simulator',
   },
 ];
 
@@ -64,10 +76,10 @@ const ProjectCard = ({ project, setSelectedProject }) => (
         ))}
       </div>
       <div className="flex justify-between">
-        <a href={project.videoDemo} target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-500 transition duration-300">
+        <a href={project.videoDemo} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300" onClick={(e) => e.stopPropagation()}>
           Video Demo
         </a>
-        <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-500 transition duration-300">
+        <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300" onClick={(e) => e.stopPropagation()}>
           GitHub
         </a>
       </div>
@@ -100,6 +112,14 @@ const ProjectModal = ({ project, closeModal }) => (
             <li key={index}>{tech}</li>
           ))}
         </ul>
+        <div className="flex justify-between mb-4">
+          <a href={project.videoDemo} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+            Video Demo
+          </a>
+          <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+            GitHub
+          </a>
+        </div>
         <button
           onClick={closeModal}
           className="bg-gradient-to-r from-gray-900 to-black text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block shadow-lg hover:shadow-xl border border-gray-700 hover:border-white hover:border-opacity-80"
@@ -116,7 +136,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-11">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
