@@ -44,8 +44,8 @@ const BlogPostCard = ({ post }) => (
   <motion.div
     layout
     className="bg-gradient-to-br from-black to-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer relative border border-gray-700 hover:border-white hover:border-opacity-80"
-    whileHover={{ scale: 1.05 }}
-    style={{ height: '450px' }}
+    whileHover={{ scale: 1.03 }}
+    style={{ height: '350px' }}
   >
     <div className="relative h-48">
       <img src={post.image} alt={post.title} className="w-full h-full object-cover rounded-t-xl" />
@@ -69,7 +69,7 @@ const BlogPostCard = ({ post }) => (
 
 export default function Blog() {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-11">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
