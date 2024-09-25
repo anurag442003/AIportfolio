@@ -3,20 +3,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const projects = [
   {
-    title: 'Batcomputer AI',
-    description: 'Advanced AI system for crime analysis and prediction',
-    image: '/batcomputer-ai.jpg',
-    tech: ['Machine Learning', 'Big Data', 'Neural Networks'],
-    videoDemo: '/videos/batcomputer-ai-demo.mp4',
-    github: 'https://github.com/batman/batcomputer-ai',
+    title: 'TextReplacement-DeepFill-v2-GAN',
+    description: 'Text-replacement via Image inpainting-DeepFill-v2-GAN Method',
+    image: 'assets/image.png',
+    tech: ['GAN', 'Image Processing','Google-Vision' ,'python'],
+    videoDemo: '/videos/GAN.mp4',
+    github: 'https://github.com/anurag442003/TextReplacement-DeepFill-v2-GAN',
   },
   {
-    title: 'Gotham Security Network',
-    description: 'AI-powered surveillance system for Gotham City',
+    title: 'Gemini-vs-OpenGPT',
+    description: '',
     image: '/gotham-security.jpg',
     tech: ['Computer Vision', 'Facial Recognition', 'Edge Computing'],
     videoDemo: '/videos/gotham-security-demo.mp4',
-    github: 'https://github.com/batman/gotham-security',
+    github: 'https://github.com/rmt4genai/GeminiVsOpenGPT',
   },
   {
     title: 'Batmobile Autopilot',

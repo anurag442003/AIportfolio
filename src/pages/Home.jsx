@@ -63,10 +63,10 @@ export default function Home() {
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
   const skills = [
-    { name: 'Neural Networks', icon: '🧠', description: 'Crafting intelligent systems inspired by the human brain' },
+    { name: 'Generative AI', icon: '🎨', description: 'Developing and implementing advanced models capable of generating novel, context-appropriate content across various modalities, including text, images and videos.' },
     { name: 'Machine Learning', icon: '🤖', description: 'Teaching machines to learn and adapt like the Batcomputer' },
-    { name: 'Stable Diffusion', icon: '👁️', description: 'Giving AI the power to see and analyze like Batman himself' },
-    { name: 'Natural Language Processing', icon: '💬', description: 'Enabling AI to understand and generate human language' },
+    { name: 'Diffusion Models', icon: '🌀', description: 'Specializing in state-of-the-art generative models that learn to gradually denoise data, enabling high-quality image synthesis and manipulation.' },
+    { name: 'Prompt Engineering', icon: '💬', description: 'Art of crafting effective inputs to guide these models in generating desired outputs, crucial for optimizing LLM performance across various applications' },
   ];
 
   return (
