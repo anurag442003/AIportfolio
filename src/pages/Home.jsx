@@ -103,8 +103,9 @@ export default function Home() {
         <a href="videos/hb.mp4" target="_blank" rel="noopener noreferrer">Imitation Learning with Unity ML-Agents</a>,
         <a href="videos/geminigpt.mp4" target="_blank" rel="noopener noreferrer">Gemini-vs-OpenGPT Comparison Tool</a>,
         <a href="videos/GAN.mp4" target="_blank" rel="noopener noreferrer">Text-Replacement Image InPainting</a>,
-        <a href="videos/" target="_blank" rel="noopener noreferrer">MemGPT-AutoGen Agents for Stock Analysis</a>,
-        <a href="videos/" target="_blank" rel="noopener noreferrer">Intelligent Service Request Automation System</a>,
+        <a href="videos/AIStoryTellerBot.mp4" target="_blank" rel="noopener noreferrer">AI Story Teller Bot</a>,
+        <a href="https://github.com/anurag442003/StockAnalysis-AutoGen-MemGPT" target="_blank" rel="noopener noreferrer">MemGPT-AutoGen Agents for Stock Analysis</a>,
+        // <a href="videos/" target="_blank" rel="noopener noreferrer">Intelligent Service Request Automation System</a>,
 
       ]
     },
@@ -163,7 +164,7 @@ export default function Home() {
           <img
             src="assets/dp5.jpg"
             alt="Anurag Basavaraj Bhusare"
-            className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-110 filter hover:grayscale"
+            className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-110"
             style={{
               boxShadow: '0 0 25px rgba(255, 255, 255, 0.8)',
             }}
