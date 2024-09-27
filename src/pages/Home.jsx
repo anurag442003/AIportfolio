@@ -124,9 +124,9 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="flex items-center justify-between mb-16"
+        className="flex items-center justify-between mb-16 relative"
       >
-        <div className="text-left">
+        <div className="text-left z-10">
           <h1 className="text-5xl md:text-5xl font-bold mb-4 text-white"
               style={{
                 textShadow: '0 0 10px rgba(255,255,255,0.5)',
@@ -156,14 +156,14 @@ export default function Home() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="ml-8"
+          className="ml-8 relative"
         >
           <img
             src="assets/dp5.jpg"
             alt="Anurag Basavaraj Bhusare"
             className="rounded-full w-64 h-64 object-cover border-4 border-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 filter hover:grayscale"
             style={{
-              boxShadow: '0 0 20px rgba(255, 255, 255, 0.3)',
+              boxShadow: '0 0 25px rgba(255, 255, 255, 0.8)',
             }}
           />
         </motion.div>
@@ -173,7 +173,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="bg-gradient-to-br from-black to-gray-900 p-6 rounded-lg shadow-2xl border border-gray-800 hover:border-white hover:border-opacity-80 transition duration-300 mb-16"
+        className="bg-gradient-to-br from-black to-gray-900 p-6 rounded-lg shadow-2xl border border-gray-800 hover:border-white hover:border-opacity-80 transition duration-300 mb-16 -mt-32 relative z-20"
       >
         <h2 className="text-2xl font-bold mb-4 text-white" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>About Me</h2>
         <p className="text-gray-300 mb-4">
