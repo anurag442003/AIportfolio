@@ -44,7 +44,7 @@ const projects = [
     github: 'https://github.com/anurag442003/StockAnalysis-AutoGen-MemGPT',
   },
   {
-    title: 'AI Story Tller',
+    title: 'AI Story Teller',
     description: 'AI-Powered Storyteller: From Idea to Narrative in Three Tiers',
     image: 'assets/Projects/storybot.png',
     tech: ['Gemini-1.5-pro', 'Streamlit', 'python'],
