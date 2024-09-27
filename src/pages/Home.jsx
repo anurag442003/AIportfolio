@@ -82,11 +82,13 @@ export default function Home() {
       title: "Education",
       items: [
         "PES UNIVERSITY - B.Tech in Computer Science and Engineering (Dec 2021-July 2025)",
-        "GPA: 8.75",
-        "Specialization: Data Science and Machine Learning",
-        "Sri Chaitanya College - Grade: 95.6% (Mar 2019- Apr 2021)",
-        "Kendriya Vidyalaya Malleswaram - Grade: 95.4% (Mar 2010-Apr 2019)"
-      ]
+        "-> GPA: 8.75",
+        "-> Specialization: Data Science and Machine Learning"],
+
+        items:[
+        "Sri Chaitanya College - Grade: 95.6% (Mar 2019- Apr 2021)"],
+        items:["Kendriya Vidyalaya Malleswaram - Grade: 95.4% (Mar 2010-Apr 2019)"]
+      
     },
     {
       title: "Work Experience",
@@ -103,9 +105,8 @@ export default function Home() {
         <a href="videos/hb.mp4" target="_blank" rel="noopener noreferrer">Imitation Learning with Unity ML-Agents</a>,
         <a href="videos/geminigpt.mp4" target="_blank" rel="noopener noreferrer">Gemini-vs-OpenGPT Comparison Tool</a>,
         <a href="videos/GAN.mp4" target="_blank" rel="noopener noreferrer">Text-Replacement Image InPainting</a>,
-        <a href="https://github.com/anurag442003/StockAnalysis-AutoGen-MemGPT" target="_blank" rel="noopener noreferrer">MemGPT-AutoGen Agents for Stock Analysis</a>,
-        <a href="videos/AIStoryTellerBot.mp4" target="_blank" rel="noopener noreferrer">AI Story Teller</a>,
-        // <a href="videos/" target="_blank" rel="noopener noreferrer">Intelligent Service Request Automation System</a>,
+        <a href="videos/" target="_blank" rel="noopener noreferrer">MemGPT-AutoGen Agents for Stock Analysis</a>,
+        <a href="videos/" target="_blank" rel="noopener noreferrer">Intelligent Service Request Automation System</a>,
 
       ]
     },
@@ -185,7 +186,7 @@ export default function Home() {
             whileTap={{ scale: 0.97 }}
           >
             <a
-              href="assets/AnuragCV_wphoto.pdf"
+              href="assets/AnuragCV_wpic.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-gray-900 to-black text-white font-bold py-2 px-4 rounded-full transition duration-300 inline-block shadow-lg hover:shadow-xl border border-white-500"
