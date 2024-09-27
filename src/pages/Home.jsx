@@ -124,10 +124,10 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="flex items-center justify-between mb-16 relative"
+        className="flex flex-col md:flex-row items-center justify-between mb-16 relative"
       >
-        <div className="text-left z-10">
-          <h1 className="text-5xl md:text-5xl font-bold mb-4 text-white"
+        <div className="text-left z-10 mb-8 md:mb-0">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white"
               style={{
                 textShadow: '0 0 10px rgba(255,255,255,0.5)',
                 background: 'linear-gradient(to bottom, #ffffff, #f0f0f0)',
@@ -136,7 +136,7 @@ export default function Home() {
               }}>
             <TextScramble text="ANURAG BASAVARAJ BHUSARE" />
           </h1>
-          <p className="text-2xl md:text-3xl text-gray-400 mb-8">
+          <p className="text-xl md:text-3xl text-gray-400 mb-8">
             <TypingEffect text="AI Enthusiast"/>
           </p>
           <motion.div
@@ -156,12 +156,12 @@ export default function Home() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="ml-8 relative"
+          className="md:ml-8 relative"
         >
           <img
             src="assets/dp5.jpg"
             alt="Anurag Basavaraj Bhusare"
-            className="rounded-full w-64 h-64 object-cover border-4 border-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-110 filter hover:grayscale"
+            className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-110 filter hover:grayscale"
             style={{
               boxShadow: '0 0 25px rgba(255, 255, 255, 0.8)',
             }}
@@ -173,10 +173,10 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="bg-gradient-to-br from-black to-gray-900 p-6 rounded-lg shadow-2xl border border-gray-800 hover:border-white hover:border-opacity-80 transition duration-300 mb-16 -mt-32 relative z-20"
+        className="bg-gradient-to-br from-black to-gray-900 p-6 rounded-lg shadow-2xl border border-gray-800 hover:border-white hover:border-opacity-80 transition duration-300 mb-16 relative z-20"
       >
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-bold text-white" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>Hey there !</h2>
+        <div className="flex flex-col md:flex-row justify-between items-center mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4 md:mb-0" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>Hey there !</h2>
           <motion.div
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
@@ -193,10 +193,10 @@ export default function Home() {
           </motion.div>
         </div>
         
-          <p className="text-gray-300 mb-4">
+        <p className="text-gray-300 mb-4">
           🎓 I'm currently a Computer Science & Engineering student at PES University, specializing in AI and Machine Learning. 
-          </p>
-          <p className="text-gray-300 mb-4">
+        </p>
+        <p className="text-gray-300 mb-4">
           🚀 My goal? To be at the forefront of AI advancements, creating solutions that make a real difference for businesses and society.
         </p>
         <p className="text-gray-300 mb-4 flex items-center">
