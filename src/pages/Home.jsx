@@ -83,11 +83,9 @@ export default function Home() {
       items: [
         "PES UNIVERSITY - B.Tech in Computer Science and Engineering (Dec 2021-July 2025)",
         "-> GPA: 8.75",
-        "-> Specialization: Data Science and Machine Learning"],
-
-        items:[
-        "Sri Chaitanya College - Grade: 95.6% (Mar 2019- Apr 2021)"],
-        items:["Kendriya Vidyalaya Malleswaram - Grade: 95.4% (Mar 2010-Apr 2019)"]
+        "-> Specialization: Data Science and Machine Learning",
+        "Sri Chaitanya College - Grade: 95.6% (Mar 2019- Apr 2021)",
+        "Kendriya Vidyalaya Malleswaram - Grade: 95.4% (Mar 2010-Apr 2019)"]
       
     },
     {
