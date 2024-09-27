@@ -119,7 +119,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-12">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -175,10 +175,24 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="bg-gradient-to-br from-black to-gray-900 p-6 rounded-lg shadow-2xl border border-gray-800 hover:border-white hover:border-opacity-80 transition duration-300 mb-16 -mt-32 relative z-20"
       >
-        <h2 className="text-2xl font-bold mb-4 text-white" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>About Me</h2>
-        <p className="text-gray-300 mb-4">
-          Hey There! 
-        </p>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-bold text-white" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>Hey there !</h2>
+          <motion.div
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <a
+              href="assets/AnuragCV_wphoto.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-gray-900 to-black text-white font-bold py-2 px-4 rounded-full transition duration-300 inline-block shadow-lg hover:shadow-xl border border-white-500"
+              style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}
+            >
+              View My Resume
+            </a>
+          </motion.div>
+        </div>
+        
           <p className="text-gray-300 mb-4">
           🎓 I'm currently a Computer Science & Engineering student at PES University, specializing in AI and Machine Learning. 
           </p>
