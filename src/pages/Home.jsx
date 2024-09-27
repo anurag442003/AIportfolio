@@ -82,7 +82,8 @@ export default function Home() {
       title: "Education",
       items: [
         "PES UNIVERSITY - B.Tech in Computer Science and Engineering (Dec 2021-July 2025)",
-        "GPA: 8.75, Specialization: Data Science and Machine Learning",
+        "GPA: 8.75",
+        "Specialization: Data Science and Machine Learning",
         "Sri Chaitanya College - Grade: 95.6% (Mar 2019- Apr 2021)",
         "Kendriya Vidyalaya Malleswaram - Grade: 95.4% (Mar 2010-Apr 2019)"
       ]
@@ -160,7 +161,10 @@ export default function Home() {
           <img
             src="assets/dp5.jpg"
             alt="Anurag Basavaraj Bhusare"
-            className="rounded-full w-64 h-64 object-cover border-4 border-white shadow-lg"
+            className="rounded-full w-64 h-64 object-cover border-4 border-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 filter hover:grayscale"
+            style={{
+              boxShadow: '0 0 20px rgba(255, 255, 255, 0.3)',
+            }}
           />
         </motion.div>
       </motion.div>
