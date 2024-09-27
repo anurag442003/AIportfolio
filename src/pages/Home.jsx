@@ -123,9 +123,9 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-16"
+        className="flex items-center justify-between mb-16"
       >
-        <div>
+        <div className="text-left">
           <h1 className="text-5xl md:text-5xl font-bold mb-4 text-white"
               style={{
                 textShadow: '0 0 10px rgba(255,255,255,0.5)',
@@ -136,11 +136,11 @@ export default function Home() {
             <TextScramble text="ANURAG BASAVARAJ BHUSARE" />
           </h1>
           <p className="text-2xl md:text-3xl text-gray-400 mb-8">
-            <TypingEffect text="AI Engineer & Innovator" />
+            <TypingEffect text="AI Enthusiast" />
           </p>
           <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
           >
             <Link
               to="/projects"
@@ -151,13 +151,25 @@ export default function Home() {
             </Link>
           </motion.div>
         </div>
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="ml-8"
+        >
+          <img
+            src="assets/dp5.jpg"
+            alt="Anurag Basavaraj Bhusare"
+            className="rounded-full w-64 h-64 object-cover border-4 border-white shadow-lg"
+          />
+        </motion.div>
       </motion.div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="bg-gradient-to-br from-black to-gray-800 p-6 rounded-lg shadow-2xl border border-gray-700 hover:border-white hover:border-opacity-80 transition duration-300 mb-16"
+        className="bg-gradient-to-br from-black to-gray-900 p-6 rounded-lg shadow-2xl border border-gray-800 hover:border-white hover:border-opacity-80 transition duration-300 mb-16"
       >
         <h2 className="text-2xl font-bold mb-4 text-white" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>About Me</h2>
         <p className="text-gray-300 mb-4">
