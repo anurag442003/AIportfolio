@@ -200,7 +200,7 @@ export default function Home() {
           🚀 My goal? To be at the forefront of AI advancements, creating solutions that make a real difference for businesses and society.
         </p>
         <p className="text-gray-300 mb-4 flex items-center">
-          <FaBuilding className="mr-2 text-white text-xl" /> As an AI Engineer intern at Right Media Tech, I've honed my skills in generative AI, Stable Diffusion, RAG systems, and workflow automation building end-to-end solutions. 
+          <FaBuilding className="mr-2 text-white text-xl" /> As an GenAI intern at Right Media Tech, I've honed my skills in generative AI, Stable Diffusion, RAG systems, and workflow automation building end-to-end solutions. 
         </p>
         <p className="text-gray-300 mb-4 flex items-center">
           <FaTools className="mr-2 text-white text-xl" /> Deep Learning, Machine learning, Generative AI, LLMs, Prompt engineering, Python.
