@@ -2,42 +2,42 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const blogPosts = [
-  {
-    title: 'The Future of AI in Crime Fighting',
-    date: 'May 15, 2023',
-    excerpt: 'Exploring how artificial intelligence is revolutionizing law enforcement and crime prevention in Gotham City.',
-    image: '/ai-crime-fighting.jpg',
-  },
-  {
-    title: 'Machine Learning: From Batcave to Gotham',
-    date: 'April 28, 2023',
-    excerpt: 'A deep dive into how machine learning algorithms are being applied to protect Gotham City from emerging threats.',
-    image: '/ml-gotham.jpg',
-  },
-  {
-    title: 'Ethics in AI: Lessons from a Dark Knight',
-    date: 'April 10, 2023',
-    excerpt: 'Discussing the ethical implications of AI in vigilante justice and the importance of responsible AI development.',
-    image: '/ai-ethics.jpg',
-  },
-  {
-    title: 'Neural Networks: Mimicking the Bat-Brain',
-    date: 'March 22, 2023',
-    excerpt: 'An exploration of how neural networks are inspired by biological brains and their applications in AI technology.',
-    image: '/neural-networks.jpg',
-  },
-  {
-    title: 'Gotham\'s Digital Twin: AI-Powered City Simulation',
-    date: 'March 5, 2023',
-    excerpt: 'How AI is being used to create a digital replica of Gotham for urban planning and crisis management.',
-    image: '/digital-twin.jpg',
-  },
-  {
-    title: 'The Role of Quantum Computing in Gotham\'s Cybersecurity',
-    date: 'February 18, 2023',
-    excerpt: 'Examining the potential of quantum computing in enhancing Gotham\'s digital defenses against cyber threats.',
-    image: '/quantum-cybersecurity.jpg',
-  },
+  // {
+  //   title: 'The Future of AI in Crime Fighting',
+  //   date: 'May 15, 2023',
+  //   excerpt: 'Exploring how artificial intelligence is revolutionizing law enforcement and crime prevention in Gotham City.',
+  //   image: '/ai-crime-fighting.jpg',
+  // },
+  // {
+  //   title: 'Machine Learning: From Batcave to Gotham',
+  //   date: 'April 28, 2023',
+  //   excerpt: 'A deep dive into how machine learning algorithms are being applied to protect Gotham City from emerging threats.',
+  //   image: '/ml-gotham.jpg',
+  // },
+  // {
+  //   title: 'Ethics in AI: Lessons from a Dark Knight',
+  //   date: 'April 10, 2023',
+  //   excerpt: 'Discussing the ethical implications of AI in vigilante justice and the importance of responsible AI development.',
+  //   image: '/ai-ethics.jpg',
+  // },
+  // {
+  //   title: 'Neural Networks: Mimicking the Bat-Brain',
+  //   date: 'March 22, 2023',
+  //   excerpt: 'An exploration of how neural networks are inspired by biological brains and their applications in AI technology.',
+  //   image: '/neural-networks.jpg',
+  // },
+  // {
+  //   title: 'Gotham\'s Digital Twin: AI-Powered City Simulation',
+  //   date: 'March 5, 2023',
+  //   excerpt: 'How AI is being used to create a digital replica of Gotham for urban planning and crisis management.',
+  //   image: '/digital-twin.jpg',
+  // },
+  // {
+  //   title: 'The Role of Quantum Computing in Gotham\'s Cybersecurity',
+  //   date: 'February 18, 2023',
+  //   excerpt: 'Examining the potential of quantum computing in enhancing Gotham\'s digital defenses against cyber threats.',
+  //   image: '/quantum-cybersecurity.jpg',
+  // },
 ];
 
 const BlogPostCard = ({ post }) => (
@@ -77,7 +77,7 @@ export default function Blog() {
         className="text-4xl font-bold mb-8 text-center text-white"
         style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}
       >
-        From the Bat-Computer: AI Insights
+        AI Insights
       </motion.h2>
 
       <motion.div

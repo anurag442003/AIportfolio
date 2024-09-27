@@ -1,54 +1,55 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { GiCrossedSwords } from 'react-icons/gi'; // Import the sword icon
 
 const projects = [
   {
     title: 'TextReplacement-DeepFill-v2-GAN',
     description: 'Text-replacement via Image inpainting-DeepFill-v2-GAN Method',
-    image: 'assets/image.png',
+    image: 'assets/Projects/tr.png',
     tech: ['GAN', 'Image Processing','Google-Vision' ,'python'],
     videoDemo: '/videos/GAN.mp4',
     github: 'https://github.com/anurag442003/TextReplacement-DeepFill-v2-GAN',
   },
   {
     title: 'Gemini-vs-OpenGPT',
-    description: '',
-    image: '/gotham-security.jpg',
-    tech: ['Computer Vision', 'Facial Recognition', 'Edge Computing'],
-    videoDemo: '/videos/gotham-security-demo.mp4',
+    description: 'Comparison of Gemini and OpenGPT with Asynchronous Processing',
+    image: 'assets/Projects/geminigpt.png',
+    tech: ['Gemini', 'Mixtral-7B','REST-API','python'],
+    videoDemo: '/videos/geminigpt.mp4',
     github: 'https://github.com/rmt4genai/GeminiVsOpenGPT',
   },
   {
-    title: 'Batmobile Autopilot',
-    description: 'Self-driving AI for the Batmobile',
-    image: '/batmobile-autopilot.jpg',
-    tech: ['Reinforcement Learning', 'Sensor Fusion', 'Real-time Decision Making'],
-    videoDemo: '/videos/batmobile-autopilot-demo.mp4',
-    github: 'https://github.com/batman/batmobile-autopilot',
+    title: 'StockAnalysis-CrewAI',
+    description: 'Multi-Agentic-AI-Stock-Analysis',
+    image: 'assets/Projects/crewAI.png',
+    tech: ['CrewAI','Agentic-AI', 'Serper-AI','web-scraping','python'],
+    videoDemo: '/videos/crewai.mp4',
+    github: 'https://github.com/anurag442003/StockAnalysis-CrewAI',
   },
   {
-    title: 'Batsuit Nanotech Interface',
-    description: 'AI-driven nanotech control system for the Batsuit',
-    image: '/batsuit-nanotech.jpg',
-    tech: ['Swarm Intelligence', 'Nanorobotics', 'Adaptive Materials'],
-    videoDemo: '/videos/batsuit-nanotech-demo.mp4',
-    github: 'https://github.com/batman/batsuit-nanotech',
+    title: 'Imitation-Learning',
+    description: 'Simulated flying of HummingBird using Imitation-Learning',
+    image: 'assets/Projects/hb.png',
+    tech: ['Imitation-Learning', 'Unity-ML-Agents', 'C#'],
+    videoDemo: '/videos/hb.mp4',
+    github: 'https://github.com/anurag442003/Hummingbird_IL',
   },
   {
-    title: 'Arkham Asylum Rehabilitation AI',
-    description: 'AI-assisted rehabilitation program for Arkham inmates',
-    image: '/arkham-rehab-ai.jpg',
-    tech: ['Natural Language Processing', 'Sentiment Analysis', 'Cognitive Behavioral Modeling'],
+    title: 'StockAnalysis-Autogen+MemGPT',
+    description: 'Pessimistic-Optimistic AI agents for Stock-Analysis',
+    image: 'assets/Projects/autogen.png',
+    tech: ['Autogen', 'MemGPT','REST-API', 'python'],
     videoDemo: '/videos/arkham-rehab-ai-demo.mp4',
-    github: 'https://github.com/batman/arkham-rehab-ai',
+    github: 'https://github.com/anurag442003/StockAnalysis-AutoGen-MemGPT',
   },
   {
-    title: 'Wayne Enterprises R&D Simulator',
-    description: 'AI-powered simulator for testing new Batman gadgets',
-    image: '/wayne-enterprises-simulator.jpg',
-    tech: ['Physics Simulation', 'Genetic Algorithms', 'Virtual Reality'],
-    videoDemo: '/videos/wayne-enterprises-simulator-demo.mp4',
-    github: 'https://github.com/batman/wayne-enterprises-simulator',
+    title: 'AI Story Tller',
+    description: 'AI-Powered Storyteller: From Idea to Narrative in Three Tiers',
+    image: 'assets/Projects/storybot.png',
+    tech: ['Gemini-1.5-pro', 'Streamlit', 'python'],
+    videoDemo: '/videos/AIStoryTellerBot.mp4',
+    github: 'https://github.com/anurag442003/AI-StoryTeller',
   },
 ];
 
@@ -137,15 +138,18 @@ export default function Projects() {
 
   return (
     <div className="container mx-auto px-4 py-11">
-      <motion.h2
+      <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-4xl font-bold mb-8 text-center text-white"
-        style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}
+        className="flex items-center justify-center mb-8"
       >
-        AI Projects: Gotham's Arsenal
-      </motion.h2>
+        <GiCrossedSwords className="text-white text-3xl mr-3" />
+        <h2 className="text-4xl font-bold text-center text-white" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>
+          My Arsenal
+        </h2>
+        <GiCrossedSwords className="text-white text-3xl ml-3" />
+      </motion.div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
