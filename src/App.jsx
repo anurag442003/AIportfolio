@@ -206,7 +206,7 @@ export default function App() {
         {/* Footer */}
         <footer className="bg-gradient-to-t from-black to-black py-4 text-center text-sm text-gray-500 z-10 w-full absolute bottom-0 shadow-lg shadow-black/50">
           <div className="container mx-auto px-6">
-            <p>&copy; 2024 AIKnight. Defending Gotham with Artificial Intelligence.</p>
+            <p>&copy; Made with ❤️ by Anurag</p>
           </div>
         </footer>
       </div>
