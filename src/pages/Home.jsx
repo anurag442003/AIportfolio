@@ -98,12 +98,14 @@ export default function Home() {
     },
     {
       title: "Projects",
-      items: [
-        "Intelligent Service Request Automation System",
-        "Stock Analysis Agent",
-        "Imitation Learning with Unity ML-Agents",
-        "MemGPT-AutoGen Agents for Stock Analysis",
-        "Gemini-vs-OpenGPT-4o Comparison Tool"
+      items: [ 
+        <a href="videos/crewai.mp4" target="_blank" rel="noopener noreferrer">Stock Analysis Agent-CrewAI</a>,
+        <a href="videos/hb.mp4" target="_blank" rel="noopener noreferrer">Imitation Learning with Unity ML-Agents</a>,
+        <a href="videos/geminigpt.mp4" target="_blank" rel="noopener noreferrer">Gemini-vs-OpenGPT Comparison Tool</a>,
+        <a href="videos/GAN.mp4" target="_blank" rel="noopener noreferrer">Text-Replacement Image InPainting</a>,
+        <a href="videos/" target="_blank" rel="noopener noreferrer">MemGPT-AutoGen Agents for Stock Analysis</a>,
+        <a href="videos/" target="_blank" rel="noopener noreferrer">Intelligent Service Request Automation System</a>,
+
       ]
     },
     {
