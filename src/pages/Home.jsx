@@ -137,7 +137,7 @@ export default function Home() {
             <TextScramble text="ANURAG BASAVARAJ BHUSARE" />
           </h1>
           <p className="text-2xl md:text-3xl text-gray-400 mb-8">
-            <TypingEffect text="AI Enthusiast" />
+            <TypingEffect text="AI Enthusiast"/>
           </p>
           <motion.div
             whileHover={{ scale: 1.03 }}
@@ -161,7 +161,7 @@ export default function Home() {
           <img
             src="assets/dp5.jpg"
             alt="Anurag Basavaraj Bhusare"
-            className="rounded-full w-64 h-64 object-cover border-4 border-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 filter hover:grayscale"
+            className="rounded-full w-64 h-64 object-cover border-4 border-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-110 filter hover:grayscale"
             style={{
               boxShadow: '0 0 25px rgba(255, 255, 255, 0.8)',
             }}
