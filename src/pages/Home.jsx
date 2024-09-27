@@ -119,7 +119,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -173,7 +173,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="bg-gradient-to-br from-black to-gray-900 p-6 rounded-lg shadow-2xl border border-gray-800 hover:border-white hover:border-opacity-80 transition duration-300 mb-16 relative z-20"
+        className="bg-gradient-to-br from-black to-gray-1000 p-6 rounded-lg shadow-2xl border border-gray-800 hover:border-white hover:border-opacity-80 transition duration-300 mb-16 relative z-20"
       >
         <div className="flex flex-col md:flex-row justify-between items-center mb-4">
           <h2 className="text-2xl font-bold text-white mb-4 md:mb-0" style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}>Hey there !</h2>
