@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaTools, FaBuilding } from 'react-icons/fa'; // Import toolkit and better work icons
+import { FaTools, FaBuilding } from 'react-icons/fa';
 
 const TextScramble = ({ text }) => {
   const [scrambledText, setScrambledText] = useState('');
@@ -112,7 +112,7 @@ export default function Home() {
         "Technical: Python, Machine Learning, Generative AI, LLM, Prompt Engineering, Data Analysis, SQL",
         "Soft Skills: Team Leadership, Logical-Rational Thinking, Drive and Initiative",
         "Certifications: Google Data Analytics Specialization",
-        "Languages: English (Fluent), Hindi (Native), Kannada (Conversational)",
+        "Languages: English (Fluent), Hindi (Fluent), Kannada (Native)",
         "Awards: 2nd Rank in National Spell Bee Competition, Chairman Award for Keyboard in Akhil Bhartiya Sangh National Contest"
       ]
     }
