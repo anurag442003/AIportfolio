@@ -185,7 +185,7 @@ export default function Home() {
             whileTap={{ scale: 0.97 }}
           >
             <a
-              href="public/assets/AnuragCV_wdp-1.pdf"
+              href="assets/AnuragCV_wdp.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-gray-900 to-black text-white font-bold py-2 px-4 rounded-full transition duration-300 inline-block shadow-lg hover:shadow-xl border border-white-500"
