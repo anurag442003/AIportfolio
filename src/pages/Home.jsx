@@ -82,16 +82,15 @@ export default function Home() {
       title: "Education",
       items: [
         "PES UNIVERSITY - B.Tech in Computer Science and Engineering (2021-2025)",
-        "GPA: 8.8",
-        "Specialization: Data Science and Machine Learning",]
+        "Specialization: Data Science and Machine Learning",
+        "GPA: 8.8",]
       
     },
     {
       title: "Work Experience",
       items: [
+        "British Telecomm Group - Software Engineering Professional (Jan 2025 - Present)",
         "Right Media Tech Private Limited - GenAI Intern (Jun 2024-Aug 2024)",
-        "Optimized generative AI tools, focusing on diffusion models and voice-AI technologies. Implemented RAG systems and workflow automation",
-        "Conducted research on emerging AI trends, producing weekly reports for strategic decision-making",
       ]
     },
     {
