@@ -81,7 +81,7 @@ export default function Home() {
     {
       title: "Education",
       items: [
-        "PES UNIVERSITY - B.Tech in Computer Science and Engineering (Dec 2021-July 2025)",
+        "PES UNIVERSITY - B.Tech in Computer Science and Engineering (2021-2025)",
         "GPA: 8.8",
         "Specialization: Data Science and Machine Learning",]
       
@@ -137,9 +137,6 @@ export default function Home() {
               }}>
             <TextScramble text="ANURAG BASAVARAJ BHUSARE" />
           </h1>
-          <p className="text-xl md:text-3xl text-gray-400 mb-8">
-            <TypingEffect text="AI Enthusiast"/>
-          </p>
           <motion.div
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
@@ -149,7 +146,7 @@ export default function Home() {
               className="bg-gradient-to-r from-gray-900 to-black text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block shadow-lg hover:shadow-xl border border-white-500"
               style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}
             >
-              Explore My Arsenal
+              Explore My Work
             </Link>
           </motion.div>
         </div>
@@ -198,11 +195,10 @@ export default function Home() {
           🎓 I'm a Computer Science & Engineering graduate from PES University, specializing in Data Science and Machine Learning. I focus on developing practical AI solutions, particularly in generative AI, RAG systems, and automation workflows. 
         </p>
         <p className="text-gray-300 mb-4">
-          My technical background includes Python, deep learning frameworks, and large language model applications. I'm interested in projects that bridge cutting-edge AI research with real-world implementation challenges.
+          My technical expertise includes Python, deep learning frameworks, and LLM-based applications. I'm passionate about bridging cutting-edge AI research with real-world impact.
         </p>
         <p className="text-gray-300">
-          Currently seeking opportunities to contribute to innovative AI projects and connect with like-minded professionals in the field 🤝
-        </p>
+          Currently open to opportunities in AI development and eager to collaborate with like-minded professionals 🤝        </p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
