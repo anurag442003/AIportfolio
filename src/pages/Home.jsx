@@ -111,7 +111,7 @@ export default function Home() {
       title: "Skills & Achievements",
       items: [
         "Technical: Python, Machine Learning, Generative AI, LLM, Prompt Engineering, Data Analysis, SQL",
-        "Soft Skills: Team Leadership, Logical-Rational Thinking, Drive and Initiative",
+        "Soft Skills: Team player, analytical thinker, proactive in taking initiative and solving problems",
         "Certifications: Google Data Analytics Specialization",
         "Languages: English (Fluent), Hindi (Fluent), Kannada (Native)",
         "Awards: 2nd Rank in National Spell Bee Competition, Chairman Award for Keyboard in Akhil Bhartiya Sangh National Contest"
