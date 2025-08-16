@@ -82,17 +82,15 @@ export default function Home() {
       title: "Education",
       items: [
         "PES UNIVERSITY - B.Tech in Computer Science and Engineering (Dec 2021-July 2025)",
-        "-> GPA: 8.75",
-        "-> Specialization: Data Science and Machine Learning",
-        "Sri Chaitanya College - Grade: 95.6% (Mar 2019- Apr 2021)",
-        "Kendriya Vidyalaya Malleswaram - Grade: 95.4% (Mar 2010-Apr 2019)"]
+        "GPA: 8.8",
+        "Specialization: Data Science and Machine Learning",]
       
     },
     {
       title: "Work Experience",
       items: [
         "Right Media Tech Private Limited - GenAI Intern (Jun 2024-Aug 2024)",
-        "Engineered and optimized generative AI tools, focusing on diffusion models and voice-AI technologies. Implemented RAG systems and workflow automation",
+        "Optimized generative AI tools, focusing on diffusion models and voice-AI technologies. Implemented RAG systems and workflow automation",
         "Conducted research on emerging AI trends, producing weekly reports for strategic decision-making",
       ]
     },
@@ -197,19 +195,13 @@ export default function Home() {
         </div>
         
         <p className="text-gray-300 mb-4">
-          🎓 I'm currently a Computer Science & Engineering student at PES University, specializing in AI and Machine Learning. 
+          🎓 I'm a Computer Science & Engineering graduate from PES University, specializing in Data Science and Machine Learning. I focus on developing practical AI solutions, particularly in generative AI, RAG systems, and automation workflows. 
         </p>
         <p className="text-gray-300 mb-4">
-          🚀 My goal? To be at the forefront of AI advancements, creating solutions that make a real difference for businesses and society.
-        </p>
-        <p className="text-gray-300 mb-4 flex items-center">
-          <FaBuilding className="mr-2 text-white text-xl" /> As an GenAI intern at Right Media Tech, I've honed my skills in generative AI, Stable Diffusion, RAG systems, and workflow automation building end-to-end solutions. 
-        </p>
-        <p className="text-gray-300 mb-4 flex items-center">
-          <FaTools className="mr-2 text-white text-xl" /> Deep Learning, Machine learning, Generative AI, LLMs, Prompt engineering, Python.
+          My technical background includes Python, deep learning frameworks, and large language model applications. I'm interested in projects that bridge cutting-edge AI research with real-world implementation challenges.
         </p>
         <p className="text-gray-300">
-          🤝 Open to discussions, collaborations, and opportunities for innovative AI solutions.
+          Currently seeking opportunities to contribute to innovative AI projects and connect with like-minded professionals in the field 🤝
         </p>
       </motion.div>
 
