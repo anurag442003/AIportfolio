@@ -137,21 +137,23 @@ export default function Home() {
               }}>
             <TextScramble text="ANURAG BASAVARAJ BHUSARE" />
           </h1>
-          <div className="mt-2"> 
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
+
+        <motion.div
+            whileHover={{ scale: 1.01 }}
+            whileTap={{ scale: 0.97 }}
+            className="flex mb-0"
             >
-              <Link
-                to="/projects"
-                className="bg-gradient-to-r from-gray-900 to-black text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block shadow-lg hover:shadow-xl border border-white-500"
-                style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}
-              >
-                Explore My Work
-              </Link>
-            </motion.div>
-          </div>
+            <Link
+              to="/projects"
+              className="bg-gradient-to-r from-gray-900 to-black text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block shadow-lg hover:shadow-xl border border-white-500"
+              style={{ textShadow: '0 0 10px rgba(255,255,255,0.5)' }}
+            >
+              Explore My Work
+            </Link>
+        </motion.div>
         </div>
+        
+        
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -167,7 +169,7 @@ export default function Home() {
             }}
           />
         </motion.div>
-      </motion.div>
+      </motion.div>   
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
