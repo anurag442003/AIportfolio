@@ -95,24 +95,40 @@ export default function Home() {
     },
     {
       title: "Projects",
-      items: [ 
-        <a href="videos/crewai.mp4" target="_blank" rel="noopener noreferrer">Stock Analysis Agent-CrewAI</a>,
-        <a href="videos/hb.mp4" target="_blank" rel="noopener noreferrer">Imitation Learning with Unity ML-Agents</a>,
-        <a href="videos/geminigpt.mp4" target="_blank" rel="noopener noreferrer">Gemini-vs-OpenGPT Comparison Tool</a>,
-        <a href="videos/GAN.mp4" target="_blank" rel="noopener noreferrer">Text-Replacement Image InPainting</a>,
-        <a href="videos/AIStoryTellerBot.mp4" target="_blank" rel="noopener noreferrer">AI Story Teller Bot</a>,
-        <a href="https://github.com/anurag442003/StockAnalysis-AutoGen-MemGPT" target="_blank" rel="noopener noreferrer">MemGPT-AutoGen Agents for Stock Analysis</a>,
-        // <a href="videos/" target="_blank" rel="noopener noreferrer">Intelligent Service Request Automation System</a>,
+        items: [
+    <a href="https://github.com/anurag442003/Abot" target="_blank" rel="noopener noreferrer">
+      Portfolio RAG Chatbot
+    </a>,
 
-      ]
+    <a href="https://github.com/anurag442003/Autonomous-Trading-Simulation" target="_blank" rel="noopener noreferrer">
+      Autonomous Trading Simulation
+    </a>,
+
+    <a href="https://github.com/anurag442003/Video-Compliance-AI" target="_blank" rel="noopener noreferrer">
+      Video Compliance AI
+    </a>,
+
+    <a href="https://github.com/anurag442003/LLM-Price-Prediction-Engine" target="_blank" rel="noopener noreferrer">
+      LLM Price Prediction Engine
+    </a>,
+
+    <a href="https://github.com/anurag442003/TextReplacement-DeepFill-v2-GAN" target="_blank" rel="noopener noreferrer">
+      Text Replacement (DeepFill v2 GAN)
+    </a>,
+
+    <a href="https://github.com/anurag442003/AI-StoryTeller" target="_blank" rel="noopener noreferrer">
+      AI-StoryTeller
+    </a>,
+  ] 
     },
     {
       title: "Skills & Achievements",
       items: [
-        "Technical: Python, Machine Learning, Generative AI, LLM, Prompt Engineering, Data Analysis, SQL",
-        "Soft Skills: Team player, analytical thinker, proactive in taking initiative and solving problems",
-        "Certifications: Google Data Analytics Specialization",
-        "Languages: English (Fluent), Hindi (Fluent), Kannada (Native)",
+        "AI/ML & Agents: OpenAI Agents SDK, LangChain, LangGraph, LangSmith, MCP, PyTorch, Transformers, RAG, PEFT, LoRA, Fine-tuning, Diffusion Models",
+        "Python Libraries: FastAPI, Gradio, Pydantic, Pandas, Ollama, Selenium",
+        "Cloud: Azure AI Stack (Video Indexer, AI Search, OpenAI Service, Monitor, OpenTelemetry), Docker",
+        "Databases: ChromaDB, FAISS, PostgreSQL, MySQL, Redis",
+        "Languages: Python, JavaScript, C++, SQL",
         "Awards: 2nd Rank in National Spell Bee Competition, Chairman Award for Keyboard in Akhil Bhartiya Sangh National Contest"
       ]
     }
@@ -195,13 +211,20 @@ export default function Home() {
         </div>
         
         <p className="text-gray-300 mb-4">
-          🎓 I'm a Computer Science & Engineering graduate from PES University, specializing in Data Science and Machine Learning. I focus on developing practical AI solutions, particularly in generative AI, RAG systems, and automation workflows. 
+          I'm a Software Engineer at BT Group, building enterprise ITSM/ITAM automation at scale on ServiceNow. 
         </p>
         <p className="text-gray-300 mb-4">
-          My technical expertise includes Python, deep learning frameworks, and LLM-based applications. I'm passionate about bridging cutting-edge AI research with real-world impact.
+          I also work on Applied AI systems—RAG pipelines, multi-agent architectures, and fine-tuned LLMs built for production use. Recent projects include an autonomous multi-agent trading simulator using the OpenAI Agents SDK and MCP, a video compliance auditing system built on Azure AI, and a QLoRA fine-tuned Llama 3.2 model that outperformed Gemini-2.5-Flash on price prediction.
+        </p>
+        <p className="text-gray-300 mb-4">
+          My focus is on reliable AI systems: agent design, retrieval quality, evaluation frameworks, and observability—not just getting models to run, but making them work consistently in real-world environments.
+        </p>
+        <p className="text-gray-300 mb-4">
+          Computer Science graduate from PES University, specializing in Data Science and Machine Learning.
         </p>
         <p className="text-gray-300">
-          Currently open to opportunities in AI development and eager to collaborate with like-minded professionals 🤝        </p>
+          Open to opportunities in AI/ML and applied LLM engineering — happy to connect🤝
+        </p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

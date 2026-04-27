@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import Abot from "./components/Abot";
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -209,6 +210,7 @@ export default function App() {
             <p>&copy; Made with ❤️ by Anurag</p>
           </div>
         </footer>
+        <Abot />
       </div>
     </Router>
   );

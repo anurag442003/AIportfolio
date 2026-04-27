@@ -4,6 +4,36 @@ import { GiCrossedSwords } from 'react-icons/gi';
 
 const projects = [
   {
+    title: 'Portfolio RAG Chatbot',
+    description: 'A Retrieval-Augmented Generation (RAG) chatbot for a personal portfolio website',
+    image: 'assets/Projects/ABot.png',
+    tech: ['Python', 'ChromaDB', 'Ollama', 'LangChain', 'Gradio'],
+    videoDemo: '/videos/geminigpt.mp4',
+    github: 'https://github.com/anurag442003/Abot',
+  },
+  {
+    title: 'Autonomous-Trading-Simulation',
+    description: 'A multi-agent AI system where four independent traders — each inspired by a legendary investor — autonomously research financial news, make portfolio decisions, and execute real stock trades on a loop, every hour',
+    image: 'assets/Projects/geminigpt.png',
+    tech: ['OpenAI Agents SDK', 'MCP', 'Gemini 2.5 Flash', 'Python asyncio'],
+    videoDemo: '/videos/geminigpt.mp4',
+    github: 'https://github.com/anurag442003/Autonomous-Trading-Simulation',
+  },
+  {
+    title: 'Video-Compliance-AI',
+    description: 'An end-to-end Agentic AI system that automatically audits YouTube video ads for brand and regulatory compliance — using RAG, LangGraph orchestration, Azure Video Indexer, and Azure AI Search.',
+    image: 'assets/Projects/Video_auditing.png',
+    tech: ['Python', 'LangGraph', 'Azure Video Indexer', 'Azure AI Search', 'Azure OpenAI', 'FastAPI'],
+    github: 'https://github.com/anurag442003/Video-Compliance-AI',
+  },
+  {
+    title: 'LLM Price Prediction Engine',
+    description: 'Fine-tuned Llama 3.2 with QLoRA for product price prediction',
+    image: 'assets/Projects/LLMPrice.png',
+    tech: ['PyTorch', 'Llama 3.2', 'QLoRA', 'scikit-learn', 'HuggingFace'],
+    github: 'https://github.com/anurag442003/LLM-Price-Prediction-Engine',
+  },
+  {
     title: 'TextReplacement-DeepFill-v2-GAN',
     description: 'Text-replacement via Image inpainting-DeepFill-v2-GAN Method',
     image: 'assets/Projects/tr.png',
@@ -20,28 +50,12 @@ const projects = [
     github: 'https://github.com/rmt4genai/GeminiVsOpenGPT',
   },
   {
-    title: 'StockAnalysis-CrewAI',
-    description: 'Multi-Agentic-AI-Stock-Analysis',
-    image: 'assets/Projects/crewAI.png',
-    tech: ['CrewAI','Agentic-AI', 'Serper-AI','web-scraping','python'],
-    videoDemo: '/videos/crewai.mp4',
-    github: 'https://github.com/anurag442003/StockAnalysis-CrewAI',
-  },
-  {
     title: 'Imitation-Learning',
     description: 'Simulated flying of HummingBird using Imitation-Learning',
     image: 'assets/Projects/hb.png',
     tech: ['Imitation-Learning', 'Unity-ML-Agents', 'C#'],
     videoDemo: '/videos/hb.mp4',
     github: 'https://github.com/anurag442003/Hummingbird_IL',
-  },
-  {
-    title: 'StockAnalysis-Autogen+MemGPT',
-    description: 'Pessimistic-Optimistic AI agents for Stock-Analysis',
-    image: 'assets/Projects/autogen.png',
-    tech: ['Autogen', 'MemGPT','REST-API', 'python'],
-    videoDemo: '/videos/arkham-rehab-ai-demo.mp4',
-    github: 'https://github.com/anurag442003/StockAnalysis-AutoGen-MemGPT',
   },
   {
     title: 'AI Story Teller',
@@ -76,9 +90,13 @@ const ProjectCard = ({ project }) => (
         ))}
       </div>
       <div className="flex justify-between">
-        <a href={project.videoDemo} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
-          Video Demo
-        </a>
+        {project.videoDemo ? (
+          <a href={project.videoDemo} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+            Video Demo
+          </a>
+        ) : (
+          <div></div>
+        )}
         <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
           GitHub
         </a>
