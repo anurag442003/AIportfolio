@@ -14,9 +14,9 @@ const projects = [
   {
     title: 'Autonomous-Trading-Simulation',
     description: 'A multi-agent AI system where four independent traders — each inspired by a legendary investor — autonomously research financial news, make portfolio decisions, and execute real stock trades on a loop, every hour',
-    image: 'assets/Projects/geminigpt.png',
+    image: 'assets/Projects/trading_simulator.png',
     tech: ['OpenAI Agents SDK', 'MCP', 'Gemini 2.5 Flash', 'Python asyncio'],
-    videoDemo: '/videos/geminigpt.mp4',
+    videoDemo: '/videos/trading_simulator.mp4',
     github: 'https://github.com/anurag442003/Autonomous-Trading-Simulation',
   },
   {
