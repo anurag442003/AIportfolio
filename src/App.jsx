@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Home from './pages/Home';
@@ -207,7 +207,7 @@ export default function App() {
         {/* Footer */}
         <footer className="bg-gradient-to-t from-black to-black py-4 text-center text-sm text-gray-500 z-10 w-full absolute bottom-0 shadow-lg shadow-black/50">
           <div className="container mx-auto px-6">
-            <p>&copy; Made with ❤️ by Anurag</p>
+            <p>&copy; Made with ❤️</p>
           </div>
         </footer>
         <Abot />
