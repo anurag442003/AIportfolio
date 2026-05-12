@@ -96,27 +96,27 @@ export default function Home() {
     {
       title: "Projects",
         items: [
-    <a href="https://github.com/anurag442003/Abot" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/anuragbhusare/Abot" target="_blank" rel="noopener noreferrer">
       Portfolio RAG Chatbot
     </a>,
 
-    <a href="https://github.com/anurag442003/Autonomous-Trading-Simulation" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/anuragbhusare/Autonomous-Trading-Simulation" target="_blank" rel="noopener noreferrer">
       Autonomous Trading Simulation
     </a>,
 
-    <a href="https://github.com/anurag442003/Video-Compliance-AI" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/anuragbhusare/Video-Compliance-AI" target="_blank" rel="noopener noreferrer">
       Video Compliance AI
     </a>,
 
-    <a href="https://github.com/anurag442003/LLM-Price-Prediction-Engine" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/anuragbhusare/LLM-Price-Prediction-Engine" target="_blank" rel="noopener noreferrer">
       LLM Price Prediction Engine
     </a>,
 
-    <a href="https://github.com/anurag442003/TextReplacement-DeepFill-v2-GAN" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/anuragbhusare/TextReplacement-DeepFill-v2-GAN" target="_blank" rel="noopener noreferrer">
       Text Replacement (DeepFill v2 GAN)
     </a>,
 
-    <a href="https://github.com/anurag442003/AI-StoryTeller" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/anuragbhusare/AI-StoryTeller" target="_blank" rel="noopener noreferrer">
       AI-StoryTeller
     </a>,
   ] 

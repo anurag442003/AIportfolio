@@ -9,7 +9,7 @@ const projects = [
     image: 'assets/Projects/ABot.png',
     tech: ['Python', 'ChromaDB', 'Ollama', 'LangChain', 'Gradio'],
     videoDemo: '/videos/geminigpt.mp4',
-    github: 'https://github.com/anurag442003/Abot',
+    github: 'https://github.com/anuragbhusare/Abot',
   },
   {
     title: 'Autonomous-Trading-Simulation',
@@ -17,21 +17,21 @@ const projects = [
     image: 'assets/Projects/trading_simulator.png',
     tech: ['OpenAI Agents SDK', 'MCP', 'Gemini 2.5 Flash', 'Python asyncio'],
     videoDemo: '/videos/trading_simulator.mp4',
-    github: 'https://github.com/anurag442003/Autonomous-Trading-Simulation',
+    github: 'https://github.com/anuragbhusare/Autonomous-Trading-Simulation',
   },
   {
     title: 'Video-Compliance-AI',
     description: 'An end-to-end Agentic AI system that automatically audits YouTube video ads for brand and regulatory compliance — using RAG, LangGraph orchestration, Azure Video Indexer, and Azure AI Search.',
     image: 'assets/Projects/Video_auditing.png',
     tech: ['Python', 'LangGraph', 'Azure Video Indexer', 'Azure AI Search', 'Azure OpenAI', 'FastAPI'],
-    github: 'https://github.com/anurag442003/Video-Compliance-AI',
+    github: 'https://github.com/anuragbhusare/Video-Compliance-AI',
   },
   {
     title: 'LLM Price Prediction Engine',
     description: 'Fine-tuned Llama 3.2 with QLoRA for product price prediction',
     image: 'assets/Projects/LLMPrice.png',
     tech: ['PyTorch', 'Llama 3.2', 'QLoRA', 'scikit-learn', 'HuggingFace'],
-    github: 'https://github.com/anurag442003/LLM-Price-Prediction-Engine',
+    github: 'https://github.com/anuragbhusare/LLM-Price-Prediction-Engine',
   },
   {
     title: 'TextReplacement-DeepFill-v2-GAN',
@@ -39,7 +39,7 @@ const projects = [
     image: 'assets/Projects/tr.png',
     tech: ['GAN', 'Image Processing','Google-Vision' ,'python'],
     videoDemo: '/videos/GAN.mp4',
-    github: 'https://github.com/anurag442003/TextReplacement-DeepFill-v2-GAN',
+    github: 'https://github.com/anuragbhusare/TextReplacement-DeepFill-v2-GAN',
   },
   {
     title: 'Gemini-vs-OpenGPT',
@@ -55,7 +55,7 @@ const projects = [
     image: 'assets/Projects/hb.png',
     tech: ['Imitation-Learning', 'Unity-ML-Agents', 'C#'],
     videoDemo: '/videos/hb.mp4',
-    github: 'https://github.com/anurag442003/Hummingbird_IL',
+    github: 'https://github.com/anuragbhusare/Hummingbird_IL',
   },
   {
     title: 'AI Story Teller',
@@ -63,7 +63,7 @@ const projects = [
     image: 'assets/Projects/storybot.png',
     tech: ['Gemini-1.5-pro', 'Streamlit', 'python'],
     videoDemo: '/videos/AIStoryTellerBot.mp4',
-    github: 'https://github.com/anurag442003/AI-StoryTeller',
+    github: 'https://github.com/anuragbhusare/AI-StoryTeller',
   },
 ];
 
@@ -145,7 +145,7 @@ export default function Projects() {
 //     image: 'assets/Projects/tr.png',
 //     tech: ['GAN', 'Image Processing','Google-Vision' ,'python'],
 //     videoDemo: '/videos/GAN.mp4',
-//     github: 'https://github.com/anurag442003/TextReplacement-DeepFill-v2-GAN',
+//     github: 'https://github.com/anuragbhusare/TextReplacement-DeepFill-v2-GAN',
 //   },
 //   {
 //     title: 'Gemini-vs-OpenGPT',
@@ -161,7 +161,7 @@ export default function Projects() {
 //     image: 'assets/Projects/crewAI.png',
 //     tech: ['CrewAI','Agentic-AI', 'Serper-AI','web-scraping','python'],
 //     videoDemo: '/videos/crewai.mp4',
-//     github: 'https://github.com/anurag442003/StockAnalysis-CrewAI',
+//     github: 'https://github.com/anuragbhusare/StockAnalysis-CrewAI',
 //   },
 //   {
 //     title: 'Imitation-Learning',
@@ -169,7 +169,7 @@ export default function Projects() {
 //     image: 'assets/Projects/hb.png',
 //     tech: ['Imitation-Learning', 'Unity-ML-Agents', 'C#'],
 //     videoDemo: '/videos/hb.mp4',
-//     github: 'https://github.com/anurag442003/Hummingbird_IL',
+//     github: 'https://github.com/anuragbhusare/Hummingbird_IL',
 //   },
 //   {
 //     title: 'StockAnalysis-Autogen+MemGPT',
@@ -177,7 +177,7 @@ export default function Projects() {
 //     image: 'assets/Projects/autogen.png',
 //     tech: ['Autogen', 'MemGPT','REST-API', 'python'],
 //     videoDemo: '/videos/arkham-rehab-ai-demo.mp4',
-//     github: 'https://github.com/anurag442003/StockAnalysis-AutoGen-MemGPT',
+//     github: 'https://github.com/anuragbhusare/StockAnalysis-AutoGen-MemGPT',
 //   },
 //   {
 //     title: 'AI Story Tller',
@@ -185,7 +185,7 @@ export default function Projects() {
 //     image: 'assets/Projects/storybot.png',
 //     tech: ['Gemini-1.5-pro', 'Streamlit', 'python'],
 //     videoDemo: '/videos/AIStoryTellerBot.mp4',
-//     github: 'https://github.com/anurag442003/AI-StoryTeller',
+//     github: 'https://github.com/anuragbhusare/AI-StoryTeller',
 //   },
 // ];
 
